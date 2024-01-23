@@ -410,7 +410,7 @@ public abstract class TransportConfig {
 			if (config.loggingHandler != null) {
 				pipeline.addFirst(NettyPipeline.LoggingHandler, config.loggingHandler);
 			}
-
+			//增加ChannelHandler 主要逻辑
 			ChannelOperations.addReactiveBridge(channel, config.channelOperationsProvider(), connectionObserver);
 
 			config.defaultOnChannelInit()

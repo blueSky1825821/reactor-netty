@@ -22,6 +22,7 @@ apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'me.champeau.gradle.japicmp'
 apply plugin: 'de.undercouch.download'
 apply plugin: 'biz.aQute.bnd.builder'
+apply plugin: 'maven-publish'
 
 ext {
 	bndOptions = [
@@ -300,7 +301,7 @@ tasks.shadowJar.dependsOn(relocateShadowJar)
 components.java.withVariantsFromConfiguration(configurations.shadowRuntimeElements) {
 	skip()
 }
-publishing.publications.mavenJava.artifact(shadowJar)
+//publishing.publications.mavenJava.artifact(shadowJar)
 
 task jarFileTest(type: Test) {
 	testClassesDirs = sourceSets.jarFileTest.output.classesDirs

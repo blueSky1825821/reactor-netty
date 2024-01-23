@@ -355,6 +355,10 @@ final class FluxReceive extends Flux<Object> implements Subscription, Disposable
 		}
 	}
 
+	/**
+	 * channelRead读取网络数据，放到queue
+	 * @param msg msg
+	 */
 	final void onInboundNext(Object msg) {
 		if (inboundDone || isCancelled()) {
 			if (log.isDebugEnabled()) {

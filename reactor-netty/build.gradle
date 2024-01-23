@@ -41,6 +41,6 @@ jar {
 javadoc.dependsOn(aggregateJavadoc)
 
 //add docs.zip to the publication
-publishing.publications.mavenJava.artifact(docsZip)
+//publishing.publications.mavenJava.artifact(docsZip)
 
 description = "Reactor Netty with all modules"
